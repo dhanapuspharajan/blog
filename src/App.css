@@ -2,37 +2,220 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.Header{
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Header>.site-name{
+  font-size: x-large;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header>.site-name{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.the{
+  font-size: 1.1rem;
+  color: white;
+  background-color: black;
+  padding-right: 0.2rem;
+  padding-left: 0.2rem;
+  margin-right: 0.2rem;
+  height: fit-content;
+  transform: rotate(-90deg);
+}
+.Home,.Fitness,.Tourism,.Technology,.Bollywood,.Food{
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+.gallery{
+  margin: 20px;
+  display: grid;
+  grid-template-columns:auto  auto;
+  flex-wrap: wrap;
+  row-gap: 5px;
+  border-radius: 20px;
+}
+.grid-item0{
+  text-align: center;
+  /* background-color: yellow; */
+}
+.grid-item1{
+display: flex;
+flex-flow: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+.g>img{
+  border-radius: 20px;
+}
+.container{
+  background-color: aquamarine; 
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+.Header>.menu>a{
+  position: relative;
+  text-decoration: none;
+  font-size: x-large;
+  color: black;
+}
+
+.Header>.menu>a:after{
+  content: '';
+  position: absolute;
+  background-color: tomato;
+  height: 4px;
+  left: 1px;
+  top: 28px;
+  box-sizing: border-box;
+  width: 0px;
+  transition: 0.3s;
+
+}
+.Header>.menu>a:hover:after{
+  width: 100%;
+}
+.Header>.menu{
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+}
+
+.Home-Latest{
+  display: flex;
+  justify-content: center;
+  gap:20px;
+  flex-wrap: wrap;
+}
+.NewsCard{
+  border-radius: 10px;
+  width: 250px;
+  height: 350px;
+  margin: 10px;
+}
+.NewsCard:hover{
+  cursor: pointer;
+  box-shadow: 0 0 5px gray;
+}
+
+.NewsCard>img{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height:150px ;
+  width: 100%;
+}
+
+.NewsCardH{
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+  width: 900px;
+  height: 150px;
+  margin: 20px;
+  justify-content: space-between;
+}
+.NewsCardH>img{
+  width: 400px;
+  height: 200px;
+}
+.NewsCardH-1{
+  width: 400px;
+  text-align: start;
+  position: relative;
+  top: -30px;
+  left: -5rem;
+}
+.grid-tourism{
+  display: flex;
+  flex-flow: row;
+}
+.tourism0{
+  width: 75%;
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+}
+
+.topPost-tourism{
+  display: flex;
+  flex-flow: column;
+  width: 20%;
+  gap: 10px;
+}
+
+.NewsCardHS{
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+  text-align:start;
+  gap: 10px;
+}
+.NewsCardHS-1>h1{
+  font-size: 1rem;
+  
+}
+.NewsCardHS-1>h1:hover{
+  cursor: pointer;
+}
+
+.NewsCardH-1>h1:hover{
+  cursor: pointer;
+}
+.NewsCardHS>img{
+  width: 120px;
+  height: 80px;
+}
+
+.article-page{
+  text-align: center;
+}
+.article-page>img{
+  width: 60vw;
+  margin-bottom: 20px;
+}
+
+.article-page>p{
+  margin: auto;
+  text-align: justify;
+  width: 60vw;
+}
+
+.article-page>.article-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: -25vw;
+}
+
+.article-head>i{
+  transform: scale(1.2);
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  padding: 0.1rem;
+}
+.article-head>i:hover{
+  cursor: pointer;
+}
+
+.line{
+  height: 0.4rem;
+  width: 4rem;
+  background-color: tomato;
+  position: relative;
+  top: -3rem;
+}
+
+.ad{
+  border:2px solid grey;
+  width: 300px;
+  height: 500px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

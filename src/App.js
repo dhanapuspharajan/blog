@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import './App.css';
+import Home from './pages/Home';
+import Tourism from './pages/Tourism';
+import Fitness from './pages/Fitness';
+import Technology from './pages/Technology';
+import Bollywood from './pages/Bollywood';
+import Food from './pages/Food';
+import { ArticleContextProvider } from './Context';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ArticleContextProvider>
+
+ 
+    <BrowserRouter>
+    <Routes>
+     <Route path={'/'} element={<Home/>} />
+      <Route path={'/pages/Tourism'} element={<Tourism/>} />
+      <Route path={'/pages/Fitness'} element={<Fitness/>} />
+      <Route path={'/pages/Technology'} element={<Technology/>} />
+      <Route path={'/pages/Bollywood'} element={<Bollywood/>} />
+      <Route path={'/pages/Food'} element={<Food/>} />
+
+    </Routes>
+    </BrowserRouter>
+    </ArticleContextProvider>
   );
 }
-
 export default App;
